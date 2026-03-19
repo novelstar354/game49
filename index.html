@@ -217,7 +217,7 @@ function scale(){
 window.addEventListener("resize",scale);
 scale();
 
-function rand(){return Math.floor(Math.random()*3);}
+function rand(){return Math.floor(Math.random()*10);}
 
 function updateUI(){
  scoreEl.textContent = score;
@@ -276,6 +276,7 @@ function fullReset(){
  current=rand();
  next=rand();
  updateUI();
+ suikaCount=0;
 
  localStorage.removeItem(SAVE_KEY);
 }
@@ -371,6 +372,7 @@ document.addEventListener("keydown",e=>{
 
  if(e.key==="r") fullReset();
  updateUI();
+    suikaCount=0;
 });
 
 
